@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "孙哥哥考研复习程序"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "单词复习程序"))
         self.label.setText(_translate("MainWindow", "事项名称："))
         self.pushButton.setText(_translate("MainWindow", "增加事项"))
         self.label_2.setText(_translate("MainWindow", "起始次数："))
@@ -143,9 +143,6 @@ class Ui_MainWindow(object):
 
     # 日历日期选择
     def showDate(self, date):
-        TTT = "距离考研："
-        TTT += str(self.calendarWidget.selectedDate().daysTo(QDate(2020, 12, 21)))+"天"
-        MainWindow.setWindowTitle(TTT)
         self.chaxun(date)
 
     # 单击事件
@@ -246,9 +243,6 @@ class Ui_MainWindow(object):
         self.lineEdit.setText("")
         self.lineEdit_2.setText('0')
 
-        TTT = "距离考研：" + \
-            str(self.calendarWidget.selectedDate().daysTo(QDate(2020, 12, 21)))+"天"
-        MainWindow.setWindowTitle(TTT)
         # 显示当前日期日程
         self.chaxun(self.calendarWidget.selectedDate())
 
